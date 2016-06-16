@@ -4,7 +4,6 @@ platforms: javascript
 author: dstrockis
 ---
 
-Call an Azure AD protected Web API in an AngularJS Single Page App
 
 如何使用 Azure AD 保护 AngularJS 单页面应用程序
 
