@@ -5,7 +5,7 @@ author: dstrockis
 ---
 
 
-如何使用 Azure AD 保护 AngularJS 单页面应用程序
+#如何使用 Azure AD 保护 AngularJS 单页面应用程序
 
 ====================
 
