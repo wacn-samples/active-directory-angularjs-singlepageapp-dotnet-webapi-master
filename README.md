@@ -13,8 +13,6 @@ author: dstrockis
 
 ADAL Javascript是一个开源的库。关于分发选项、源代码以及贡献，请访问[ADAL的资源库](https://github.com/AzureAD/azure-activedirectory-library-for-js)。
 
-ADAL for Javascript is an open source library.  For distribution options, source code, and contributions, check out the ADAL JS repo at https://github.com/AzureAD/azure-activedirectory-library-for-js.
-
 有关这个协议在这个场景及其他场景下如何工作的更多详细信息，请阅读：[Azure AD 的身份验证方案](https://www.azure.cn/documentation/articles/active-directory-authentication-scenarios/)。
 
 ## 如何运行这个示例
