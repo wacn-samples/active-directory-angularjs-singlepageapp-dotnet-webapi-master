@@ -11,14 +11,14 @@ author: dstrockis
 
 这个示例演示如何使用JavaScript的ADAL库来保护单页面应用程序，后台使用ASP.NET Web API来实现，它调用另一个采用CORS的ASP.NET Web API。
 
-ADAL Javascript是一个开源的库。关于分发选项、源代码以及贡献，请访问[ADAL的资源库](https://github.com/AzureAD/azure-activedirectory-library-for-js)。
+ADAL Javascript是一个开源的库。关于分布选项、源代码以及贡献，请访问[ADAL的资源库](https://github.com/AzureAD/azure-activedirectory-library-for-js)。
 
 有关这个协议在这个场景及其他场景下如何工作的更多详细信息，请阅读：[Azure AD 的身份验证方案](https://www.azure.cn/documentation/articles/active-directory-authentication-scenarios/)。
 
 ## 如何运行这个示例
 
 - Visual Studio 2013
-- 连接互联网
+- 接入互联网
 - 一个Azure的订阅（如果您还没有Azure订阅，请点击[此处](https://www.azure.cn/)申请试用的订阅账号）。
 
 每一个Azure订阅都有一个相关联的Azure Active Directory租户。如果你还没有Azure订阅，你可以在[https://www.azure.cn/](https://www.azure.cn/)注册一个免费的订阅。这个示例使用到的Azure AD的所有功能都是免费的。
@@ -26,7 +26,7 @@ ADAL Javascript是一个开源的库。关于分发选项、源代码以及贡�
 
 ### 第一步： 克隆或者下载这个资源库
 
-从你的shell或者命令行：
+在shell或者命令行中执行：
 
 	git clone https://github.com/wacn-samples/active-directory-angularjs-singlepageapp-dotnet-webapi.git
 
@@ -41,11 +41,11 @@ ADAL Javascript是一个开源的库。关于分发选项、源代码以及贡�
 6. 选择“Web 应用程序和/或 Web API”。
 7. 为您的程序输入友好的名字，例如示例“To Go API”，然后点击继续。
 8. 在登录URL中输入示例的基地址，默认是`https://localhost:44327/`。
-9. 在应用程序 ID URI中输入`https://<your_tenant_name>/ToGoAPI`，使用你的Azure AD租户的名字替代`<your_tenant_name>`
+9. 在应用程序 ID URI中输入`https://<your_tenant_name>/ToGoAPI`，使用您的Azure AD租户的名字替代`<your_tenant_name>`
 
-都完成了！在进入下一个步骤前，你需要找到程序的应用程序 ID URI。
+这就完成了！在进入下一个步骤前，你需要找到程序的“应用程序 ID URI”。
 
-1. 如果然在Azure门户，点击你程序的配置标签。
+1. 这时候应该还在Azure门户页面，点击您程序的配置标签。
 2. 找到应用程序 ID URI的值，然后复制到粘贴板。
 
 ### 第三步：在您的Azure AD租户中配置To Go API程序
