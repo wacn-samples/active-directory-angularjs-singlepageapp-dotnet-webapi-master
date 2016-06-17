@@ -51,15 +51,15 @@ ADAL Javascript是一个开源的库。关于分发选项、源代码以及贡�
 ### 第三步：在您的Azure AD租户中配置To Go API程序
 
 1. 在Visual Studio 2013中打开解决方案。
--. 在ToGoAPI项目中打开`web.config`文件。
--. 找到程序键值 `ida:Tenant`，然后使用你的AAD租户的名字替换掉它的值。
--. 找到程序键值`ida:Audience`，然后使用从Azure管理门户复制的应用程序 ID URI替换掉它的值。
--. 找到程序键值`ida:MetadataAddress`，然后再Azure管理门户中点击下方的“查看端点”，复制联合元数据文档的值替换掉它的值。
--. 在ToGoAPI项目中，打开文件`Controllers/ToGoListController.cs`，在`[EnableCors...]`特性中输入To Do SPA的客户端程序，默认值是`https://localhost:44326`.确保省去值最后面的斜杠。
--. 在TodoSPA项目中，打开文件`App/Scripts/App.js`然后定位到`endpoints`对象。
--. 输入的映射To Go API端点到它的资源标识符。`endpoints`对象的属性应该是To Go API的位置。默认是`https://localhost:44327/`。这个属性的值是从Azure门户复制的应用程序 ID URI，例如：`https://<your_tenant_name>/ToGoAPI`。
--. 不要担心这个文件中其他的配置值，我们稍后会介绍。
--. 在TodoSPA项目中打开`App/Scripts/toGoListSvc.js`文件，然后使用To Go API地址的值来替换掉`apiEndpoint`变量的值。默认是：`https://localhost:44327/`。
+2. 在ToGoAPI项目中打开`web.config`文件。
+3. 找到程序键值 `ida:Tenant`，然后使用你的AAD租户的名字替换掉它的值。
+4. 找到程序键值`ida:Audience`，然后使用从Azure管理门户复制的应用程序 ID URI替换掉它的值。
+5. 找到程序键值`ida:MetadataAddress`，然后再Azure管理门户中点击下方的“查看端点”，复制联合元数据文档的值替换掉它的值。
+6. 在ToGoAPI项目中，打开文件`Controllers/ToGoListController.cs`，在`[EnableCors...]`特性中输入To Do SPA的客户端程序，默认值是`https://localhost:44326`.确保省去值最后面的斜杠。
+7. 在TodoSPA项目中，打开文件`App/Scripts/App.js`然后定位到`endpoints`对象。
+8. 输入的映射To Go API端点到它的资源标识符。`endpoints`对象的属性应该是To Go API的位置。默认是`https://localhost:44327/`。这个属性的值是从Azure门户复制的应用程序 ID URI，例如：`https://<your_tenant_name>/ToGoAPI`。
+9. 不要担心这个文件中其他的配置值，我们稍后会介绍。
+10. 在TodoSPA项目中打开`App/Scripts/toGoListSvc.js`文件，然后使用To Go API地址的值来替换掉`apiEndpoint`变量的值。默认是：`https://localhost:44327/`。
 
 ### 第四步：在您的Azure AD租户中注册单页面应用程序
 
@@ -94,7 +94,7 @@ ADAL Javascript是一个开源的库。关于分发选项、源代码以及贡�
 2. 在TodoSPA项目中，打开`web.config`文件。
 3. 找到程序的键值`ida:Tenant`，然后使用AAD租户的名字替换掉它的值。
 4. 找到程序的键值`ida:Audience`然后使用Azure门户网站中的客户端ID替换掉它的值。
-5. -. 找到程序键值`ida:MetadataAddress`，然后再Azure管理门户中点击下方的“查看端点”，复制联合元数据文档的值替换掉它的值。
+5. 找到程序键值`ida:MetadataAddress`，然后再Azure管理门户中点击下方的“查看端点”，复制联合元数据文档的值替换掉它的值。
 5. 在TodoSPA项目中，打开文件`App/Scripts/App.js`，定位到`adalAuthenticationServiceProvider.init(`。
 6. 使用您的AAD租户的名字替换掉`tenant`。
 7. 使用Azure管理门户中客户端ID的值替换掉`clientId`。
