@@ -17,6 +17,7 @@ namespace ToGoAPI
                 {
                     Audience = ConfigurationManager.AppSettings["ida:Audience"],
                     Tenant = ConfigurationManager.AppSettings["ida:Tenant"],
+                    MetadataAddress = ConfigurationManager.AppSettings["ida:MetadataAddress"]
                 });
         }
 
