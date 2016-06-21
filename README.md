@@ -35,8 +35,8 @@ ADAL Javascript是一个开源的库。关于分布选项、源代码以及贡�
 
 1. 登录[门户网站](https://manage.windowsazure.cn)。
 2. 点击左侧导航栏中的Active Directory 。
-3. 点击你想注册示例程序的目录租户。
-4. 点击程序标签。
+3. 点击您想注册示例程序的目录租户。
+4. 点击“应用程序”标签。
 5. 点击下方的“添加”。
 6. 选择“Web 应用程序和/或 Web API”。
 7. 为您的程序输入友好的名字，例如示例“To Go API”，然后点击继续。
@@ -54,10 +54,10 @@ ADAL Javascript是一个开源的库。关于分布选项、源代码以及贡�
 2. 在ToGoAPI项目中打开`web.config`文件。
 3. 找到程序键值 `ida:Tenant`，然后使用你的AAD租户的名字替换掉它的值。
 4. 找到程序键值`ida:Audience`，然后使用从Azure管理门户复制的应用程序 ID URI替换掉它的值。
-5. 找到程序键值`ida:MetadataAddress`，然后再Azure管理门户中点击下方的“查看端点”，复制联合元数据文档的值替换掉它的值。
-6. 在ToGoAPI项目中，打开文件`Controllers/ToGoListController.cs`，在`[EnableCors...]`特性中输入To Do SPA的客户端程序，默认值是`https://localhost:44326`.确保省去值最后面的斜杠。
-7. 在TodoSPA项目中，打开文件`App/Scripts/App.js`然后定位到`endpoints`对象。
-8. 输入的映射To Go API端点到它的资源标识符。`endpoints`对象的属性应该是To Go API的位置。默认是`https://localhost:44327/`。这个属性的值是从Azure门户复制的应用程序 ID URI，例如：`https://<your_tenant_name>/ToGoAPI`。
+5. 找到程序键值`ida:MetadataAddress`，然后在Azure管理门户中点击下方的“查看端点”，复制“联合元数据文档”的值并替换掉它的值。
+6. 在ToGoAPI项目中，打开文件`Controllers/ToGoListController.cs`，在`[EnableCors...]`特性中输入To Do SPA的客户端的地址，默认值是`https://localhost:44326`.确保省去地址最后面的斜杠。
+7. 在TodoSPA项目中，打开文件`App/Scripts/App.js`然后定位到声明的`endpoints`对象。
+8. 输入To Go API端点位置到它的资源标识符的映射。`endpoints`对象的属性的名字应该是To Go API的地址。默认是`https://localhost:44327/`。这个属性的值是从Azure门户复制的应用程序 ID URI，例如：`https://<your_tenant_name>/ToGoAPI`。
 9. 不要担心这个文件中其他的配置值，我们稍后会介绍。
 10. 在TodoSPA项目中打开`App/Scripts/toGoListSvc.js`文件，然后使用To Go API地址的值来替换掉`apiEndpoint`变量的值。默认是：`https://localhost:44327/`。
 
@@ -76,12 +76,12 @@ ADAL Javascript是一个开源的库。关于分布选项、源代码以及贡�
 
 都完成了！在进入下一个步骤前，你需要找到程序的客户端ID。
 
-1. 如果然在Azure门户，点击你程序的配置标签。
+1. 这时候应该还在Azure门户页面，点击您程序的配置标签。
 2. 找到客户端ID的值，然后复制到粘贴板。
 
 ### 第五步：为您的应用程序开启OAuth2隐式流
 
-默认情况下，应用程序的Azure AD的应用程序中未启用OAuth2隐式流。为例运行这个示例，您需要明确的启用它。
+默认情况下，应用程序的Azure AD的应用程序中未启用OAuth2隐式流。为运行这个示例，您需要明确的启用它。
 
 1. 在之前的步骤中，您的浏览器应该还在Azure管理门户页面 - 应该还显示着您程序的配置页。
 2. 使用下方的“管理清单”按钮，下载程序的清单，然后保存在本地。
@@ -92,9 +92,9 @@ ADAL Javascript是一个开源的库。关于分布选项、源代码以及贡�
 
 1. 在Visual Studio 2013中打开解决方案。
 2. 在TodoSPA项目中，打开`web.config`文件。
-3. 找到程序的键值`ida:Tenant`，然后使用AAD租户的名字替换掉它的值。
-4. 找到程序的键值`ida:Audience`然后使用Azure门户网站中的客户端ID替换掉它的值。
-5. 找到程序键值`ida:MetadataAddress`，然后再Azure管理门户中点击下方的“查看端点”，复制联合元数据文档的值替换掉它的值。
+3. 找到程序键值`ida:Tenant`，然后使用AAD租户的名字替换掉它的值。
+4. 找到程序键值`ida:Audience`然后使用Azure门户网站中的客户端ID替换掉它的值。
+5. 找到程序键值`ida:MetadataAddress`，然后在Azure管理门户中点击下方的“查看端点”，复制“联合元数据文档”的值并替换掉它的值。。
 5. 在TodoSPA项目中，打开文件`App/Scripts/App.js`，定位到`adalAuthenticationServiceProvider.init(`。
 6. 使用您的AAD租户的名字替换掉`tenant`。
 7. 使用Azure管理门户中客户端ID的值替换掉`clientId`。
@@ -107,14 +107,14 @@ ADAL Javascript是一个开源的库。关于分布选项、源代码以及贡�
 
 ## 如何部署这个示例到Azure
 
-为了部署To Do SPA 和 To Go API到Azure网站应用，您需要创建两个网站，然后将项目分别发布，然后更新项目使用新的地址替换掉IIS Express。
+为了部署To Do SPA 和 To Go API到Azure网站应用，您需要创建两个网站，将项目分别发布，然后更新项目使用新的地址替换掉IIS Express。
 
 ### 创建To Go API Azure网站
 
 1. 登录[门户网站](https://manage.windowsazure.cn)。
 2. 点击左侧导航栏中的WEB 应用。
 3. 点击左下角的“新建”按钮，选择计算--> WEB 应用 --> 自定义创建，输入您网站的名字，例如：togo-contoso.chinacloudsites.cn,选择APP SERVICE计划，选择使用的数据库，或者新建一个。点击“完成”创建网站。
-4. 当网站创建好，点击来管理它。对于此组步骤，下载 发布配置文件然后保存。也可以使用其他一些部署机制，例如从源代码管理发布。
+4. 当网站创建好，点击来管理它。对于此组步骤，下载发布配置文件然后保存。也可以使用其他一些部署机制，例如从源代码管理发布。
 
 ### 创建To Go SPA Azure网站
 
@@ -123,24 +123,24 @@ ADAL Javascript是一个开源的库。关于分布选项、源代码以及贡�
 1. 登录[门户网站](https://manage.windowsazure.cn)。
 2. 点击左侧导航栏中的WEB 应用。
 3. 点击左下角的“新建”按钮，选择计算--> WEB 应用 --> 自定义创建，输入您网站的名字，例如：togo-contoso.chinacloudsites.cn,选择APP SERVICE计划，选择使用的数据库，使用和To Go API一样的就好了。点击“完成”创建网站。
-4. 当网站创建好，点击来管理它。对于此组步骤，下载 发布配置文件然后保存。
+4. 当网站创建好，点击来管理它。对于此组步骤，下载发布配置文件然后保存。
 
 ### 为使用Azure网站更新项目
 
 1. 在Visual Studio中，定位到TodoSPA项目。
-2. 需要改变两处。在`App\Scripts\app.js`文件中，使用您To Go API新的地址来替换掉`endpoints`对象属性的值，例如`https://togo-contoso.chinacloudsites.cn/`。在`App\Scripts\toGoListSvc.js`中使用同样的值替换掉 `apiEndpoint`变量。
+2. 需要改变两处。在`App\Scripts\app.js`文件中，使用您To Go API新的地址来替换掉`endpoints`对象属性的名字的值，例如`https://togo-contoso.chinacloudsites.cn/`。在`App\Scripts\toGoListSvc.js`中使用同样的值替换掉 `apiEndpoint`变量。
 3. 在ToGoAPI项目中，只需要改变一处。在`Controllers\ToGoListController.cs`中更新`[EnableCors...]`特性映射的值，例如`https://togo-contoso.chinacloudsites.cn`。再次强调，务必忽略最后的斜杠。
 
 ### 发布To Go API到Azure网站
 
-1. 切换到Visual Studio，定位到ToGoAPI项目，右击解决方案中的该项目，选择“Publish”。点击“Import”，然后倒入之前下载的To Go API的发布配置文件。
+1. 切换到Visual Studio，定位到ToGoAPI项目，右击解决方案中的该项目，选择“Publish”。点击“Import”，然后导入之前下载的To Go API的发布配置文件。
 2. 在“Connection”标签上，更新目标URL使用https，例如`https://togo-contoso.chinacloudsites.cn/`。点击下一步。
 3. 在“Settings”标签中，确保“Enable Organizational Authentication”没有被选中，点击发布。
 4. Visual Studio将发布项目，完成后会自动打开浏览器并浏览发布的项目。如果您看到项目默认的页面，发布就成功了。
 
 ### 发布To Go SPA到Azure网站
 
-1. 切换到Visual Studio，定位到ToGoAPI项目，右击解决方案中的该项目，选择“Publish”。点击“Import”，然后倒入之前下载的To Go SPA的发布配置文件。
+1. 切换到Visual Studio，定位到ToGoAPI项目，右击解决方案中的该项目，选择“Publish”。点击“Import”，然后导入之前下载的To Go SPA的发布配置文件。
 2. 在“Connection”标签上，更新目标URL使用https，例如`https://togo-contoso.chinacloudsites.cn/`。点击下一步。
 3. 在“Settings”标签中，确保“Enable Organizational Authentication”没有被选中，点击发布。
 4. Visual Studio将发布项目，完成后会自动打开浏览器并浏览发布的项目。如果您看到项目默认的页面，发布就成功了。
